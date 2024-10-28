@@ -1,17 +1,36 @@
 "use client";
 // @flow strict
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Clean up body styles when component unmounts
+  useEffect(() => {
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, []);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    if (!isMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  const handleLinkClick = (e) => {
+    const href = e.currentTarget.getAttribute("href");
+    if (href.startsWith("/#")) {
+      closeMenu();
+      const targetId = href.substring(2);
+      const element = document.getElementById(targetId);
+      if (element) {
+        e.preventDefault();
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     }
   };
 
@@ -35,6 +54,7 @@ function Navbar() {
           <button
             onClick={toggleMenu}
             className="md:hidden p-2 text-[#ABB2BF] hover:text-[#98C379] focus:outline-none z-50"
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           >
             <svg
               className="h-6 w-6"
@@ -64,7 +84,7 @@ function Navbar() {
           {isMenuOpen && (
             <div
               className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={closeMenu}
             />
           )}
 
@@ -72,7 +92,7 @@ function Navbar() {
           <div
             className={`${
               isMenuOpen
-                ? "fixed inset-y-0 right-0 w-64 bg-[#1E1E1E] shadow-lg transform translate-x-0"
+                ? "fixed inset-y-0 right-0 w-64 bg-[#1E1E1E] shadow-lg transform translate-x-0 overflow-y-auto"
                 : "hidden transform translate-x-full"
             } transition-transform duration-300 ease-in-out md:relative md:block md:bg-transparent md:w-auto md:transform-none md:translate-x-0 top-0 z-40`}
           >
@@ -81,7 +101,7 @@ function Navbar() {
                 <Link
                   className="block px-4 py-3 md:py-2 no-underline outline-none hover:no-underline group"
                   href="/#about"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={handleLinkClick}
                 >
                   <div className="font-mono text-[#ABB2BF] transition-colors duration-300 group-hover:text-[#98C379]">
                     {"<About/>"}
@@ -92,7 +112,7 @@ function Navbar() {
                 <Link
                   className="block px-4 py-3 md:py-2 no-underline outline-none hover:no-underline group"
                   href="/#experience"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={handleLinkClick}
                 >
                   <div className="font-mono text-[#ABB2BF] transition-colors duration-300 group-hover:text-[#98C379]">
                     {"<Experience/>"}
@@ -103,7 +123,7 @@ function Navbar() {
                 <Link
                   className="block px-4 py-3 md:py-2 no-underline outline-none hover:no-underline group"
                   href="/#skills"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={handleLinkClick}
                 >
                   <div className="font-mono text-[#ABB2BF] transition-colors duration-300 group-hover:text-[#98C379]">
                     {"<Skills/>"}
@@ -114,7 +134,7 @@ function Navbar() {
                 <Link
                   className="block px-4 py-3 md:py-2 no-underline outline-none hover:no-underline group"
                   href="/#education"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={handleLinkClick}
                 >
                   <div className="font-mono text-[#ABB2BF] transition-colors duration-300 group-hover:text-[#98C379]">
                     {"<Education/>"}
@@ -125,7 +145,7 @@ function Navbar() {
                 <Link
                   className="block px-4 py-3 md:py-2 no-underline outline-none hover:no-underline group"
                   href="/#projects"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={handleLinkClick}
                 >
                   <div className="font-mono text-[#ABB2BF] transition-colors duration-300 group-hover:text-[#98C379]">
                     {"<Projects/>"}
