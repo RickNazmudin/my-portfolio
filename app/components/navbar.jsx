@@ -8,7 +8,6 @@ function Navbar() {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    // Menambahkan/menghapus class untuk mencegah scrolling ketika menu terbuka
     if (!isMenuOpen) {
       document.body.style.overflow = "hidden";
     } else {
@@ -28,7 +27,7 @@ function Navbar() {
               <span className="text-[#E06C75]">const</span>{" "}
               <span className="text-[#98C379]">dev</span>{" "}
               <span className="text-[#E5C07B]">=</span>{" "}
-              <span className="text-[#61AFEF]">"RICKO"</span>
+              <span className="text-[#61AFEF]">&quot;RICKO&quot;</span>
             </Link>
           </div>
 
@@ -85,7 +84,7 @@ function Navbar() {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <div className="font-mono text-[#ABB2BF] transition-colors duration-300 group-hover:text-[#98C379]">
-                    About
+                    {"<About/>"}
                   </div>
                 </Link>
               </li>
@@ -96,7 +95,7 @@ function Navbar() {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <div className="font-mono text-[#ABB2BF] transition-colors duration-300 group-hover:text-[#98C379]">
-                    Experience
+                    {"<Experience/>"}
                   </div>
                 </Link>
               </li>
@@ -107,7 +106,7 @@ function Navbar() {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <div className="font-mono text-[#ABB2BF] transition-colors duration-300 group-hover:text-[#98C379]">
-                    Skills
+                    {"<Skills/>"}
                   </div>
                 </Link>
               </li>
@@ -118,7 +117,7 @@ function Navbar() {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <div className="font-mono text-[#ABB2BF] transition-colors duration-300 group-hover:text-[#98C379]">
-                    Education
+                    {"<Education/>"}
                   </div>
                 </Link>
               </li>
@@ -129,7 +128,7 @@ function Navbar() {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <div className="font-mono text-[#ABB2BF] transition-colors duration-300 group-hover:text-[#98C379]">
-                    Projects
+                    {"<Projects/>"}
                   </div>
                 </Link>
               </li>
