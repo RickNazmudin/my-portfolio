@@ -1,51 +1,125 @@
-import ayla from '/public/image/ayla.jpg';
-import crefin from '/public/image/crefin.jpg';
-import realEstate from '/public/image/real-estate.jpg';
-import travel from '/public/image/travel.jpg';
+import ayla from "/public/image/ayla.jpg";
+import crefin from "/public/image/crefin.jpg";
+import realEstate from "/public/image/real-estate.jpg";
+import travel from "/public/image/travel.jpg";
 
 export const projectsData = [
-    {
-        id: 1,
-        name: 'AI Powered Financial App',
-        description: "Me and my team built an AI-powered financial mobile application. I have developed API using Express, Typescript, OpenAI, AWS, and MongoDB. Used OTP via AWS SES, Google, and Facebook for the authentication system. Built AI assistants using OpenAI's latest model and trained using our dataset. Voice messages are converted to text using AWS Transcribe. The app fetches data from Google Sheets and generates a PDF term sheet, sent via AWS SES.",
-        tools: ['Express', 'MongoDB', 'OpenAI API', 'AWS SES', 'AWS S3', 'Node Mailer', 'Joi', 'Puppeteer', 'EC2', 'PM2', 'Nginx'],
-        role: 'Backend Developer',
-        code: '',
-        demo: '',
-        image: crefin,
-    },
-    {
-        id: 2,
-        name: 'Travel Agency App',
-        description: 'I have designed and developed a full-stack web app for 2Expedition, a travel agency in Armenia. I created the UI using NextJS, Typescript, MUI, TailwindCSS, Google Maps, Sun-Editor, and React Slick. The app supports multiple languages and currencies. I developed the API using NestJS, Typescript, MySQL, TypeORM, AWS, and Nodemailer. I deployed the front-end app to AWS Amplify and the back-end app to AWS EC2.',
-        tools: ['NextJS', 'Tailwind CSS', "Google Maps", "NestJS", "TypeScript", "MySQL", "AWS S3", "Sun-Editor", "Gmail Passkey"],
-        role: 'Full Stack Developer',
-        code: '',
-        demo: '',
-        image: travel,
-    },
-    {
-        id: 3,
-        name: 'AI Powered Real Estate',
-        description: 'My team built an AI-based real estate app using Replicate API and OpenAI. We used Express, Typescript, OpenAI, Replicate, Stripe, and Mongoose to develop the API. We utilized NextJS, Formik, TailwindCSS, and other npm libraries for the UI. We have trained multiple AI assistants using the latest GPT model and integrated Replicate API for image processing. We added role-based auth, subscription plans, Cron job scheduling, and payment integration with Stripe.',
-        tools: ['React', 'Bootstrap', 'SCSS', 'Stripe', 'Express', 'TypeScript', 'MongoDB', 'Azure Blob', 'OpenAI API', 'Replicate AI', 'Cronjob', 'JWT'],
-        code: '',
-        role: 'Full Stack Developer',
-        demo: '',
-        image: realEstate,
-    },
-    {
-        id: 4,
-        name: 'Newsroom Management',
-        description: "My team and I developed a newspaper management dashboard application called Newsroom Management. As a front-end developer, I worked on creating the dashboard using NextJS, Material UI, Redux, Calendar, and other necessary npm libraries. We used React Redux to manage the application's state and React-hook-form and Sun Editor to handle forms.",
-        tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
-        code: '',
-        demo: '',
-        image: ayla,
-        role: 'Full Stack Developer',
-    }
-];
+  {
+    id: 1,
+    name: "POS (Point Of Sale)",
+    description:
+      "My team and I developed a comprehensive POS (Point of Sale) application for web and mobile. The backend API was built with Node.js, Express, and MongoDB, ensuring data consistency. We used AWS S3 for secure receipt and inventory storage and managed real-time data sync with WebSocket. Authentication is handled via JWT and OAuth for Google login. Payment processing is integrated with Stripe and PayPal. The frontend was created using React for web and Flutter for mobile. Transaction reports are generated in PDF with Puppeteer and sent via AWS SES. The app is deployed on AWS EC2, managed with PM2 and Nginx.",
+    tools: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Vue.js",
+      "Node.js",
+      "PHP",
+      "Python",
+      "Java",
+      "MySQL",
+      "Nginx",
+      "MongoDB",
+      "REST API",
+      "WebSocket",
+      "PWA",
+      "JWT",
+      "VSCode",
+    ],
+    role: "Backend Developer",
+    code: "",
+    demo: "",
+    image: "",
+  },
+  {
+    id: 2,
+    name: "Q Hopes",
+    description:
+      "I developed a comprehensive healthcare management system for QHopes, designed for hospitals. The mobile app was built using Java for Android, providing an intuitive user interface. The backend utilized the Spring Framework to create robust APIs, with MySQL for secure data management. AWS services were employed for cloud hosting, and the system was deployed on AWS EC2, enhancing scalability and reliability. This solution aims to streamline hospital operations and improve patient care.",
+    tools: [
+      "Java",
+      "",
+      "JavaScript",
+      "PHP",
+      "Python",
+      "MySQL",
+      "Kotlin",
+      "Spring Framework",
+      "Node.js",
+      "AWS",
+      "Docker",
+      "RESTful API",
+      "GraphQL",
+    ],
+    role: "Full Stack Developer",
+    code: "",
+    demo: "",
+    image: "",
+  },
+  {
+    id: 3,
+    name: "Q TOS",
+    description:
+      "Our team built QTOS (Terminal Operating System) to streamline container terminal operations. We used Node.js and PHP for the backend, with Vue.js on the frontend to create a responsive interface. MySQL and Redis supported data management, and Docker with Kubernetes ensured efficient deployment. Grafana and Prometheus provided real-time system monitoring for optimal logistics management.",
+    tools: [
+      "Java",
+      "JavaScript",
+      "PHP",
+      "Python",
+      "React",
+      "Laravel",
+      "Spring Boot",
+      "Redis",
+      "MySQL",
+      "AWS",
+      "Docker",
+      "Kubernetes",
+      "ElasticSearch",
+      "Grafana",
+      "Jenkins",
+    ],
+    code: "",
+    role: "Full Stack Developer",
+    demo: "",
+    image: "",
+  },
+  {
+    id: 4,
+    name: "EA Forex Fury",
+    description:
+      "My team and I developed Forex Fury, an automated trading robot for forex markets. I contributed to the algorithm design using MQL4 and MQL5, enabling the robot to execute trades based on specific market conditions. We integrated features like dynamic retrace stop loss and a range filter to optimize performance. Additionally, I assisted in backtesting strategies against historical data to enhance profitability and ensure ease of use for traders through a user-friendly interface",
+    tools: [
+      "Machine Learning",
+      "Artificial Intelligence",
+      "MQL4/MQL5",
+      "Data Analysis Tools",
+    ],
+    code: "",
+    demo: "",
+    image: "",
+    role: "Forex Developer",
+  },
 
+  {
+    id: 5,
+    name: "EA GPS Forex Robot",
+    description:
+      "My team and I developed GPS Forex Robot, an automated trading solution designed for forex markets. I contributed to the coding using MQL4 to enable the robot to analyze market data and execute trades with high accuracy. We implemented advanced algorithms to predict price movements and included risk management features like dynamic stop-loss settings. Additionally, I assisted in optimizing the robot through rigorous backtesting against historical market data, ensuring its reliability and performance for traders seeking a user-friendly trading tool.",
+    tools: [
+      "Machine Learning",
+      "Artificial Intelligence",
+      "MetaTrader 4 (MT4)",
+      "Analisis Statistik dan Algoritma Trading",
+      "MQL4 (MetaQuotes Language 4)",
+    ],
+    code: "",
+    demo: "",
+    image: "",
+    role: "Forex Developer",
+  },
+];
 
 // Do not remove any property.
 // Leave it blank instead as shown below

@@ -1,17 +1,18 @@
 export const personalData = {
-  name: "ABU SAID",
-  profile: '/profile.png',
+  name: "RICKO NAJMUDIN",
+  profile: "/ricko.png",
   designation: "Software Developer",
-  description: "My name is ABU SAID. I am a professional and enthusiastic programmer in my daily life. I am a quick learner with a self-learning attitude. I love to learn and explore new technologies and am passionate about problem-solving. I love almost all the stacks of web application development and love to make the web more open to the world. My core skill is based on JavaScript and I love to do most of the things using JavaScript. I am available for any kind of job opportunity that suits my skills and interests.",
-  email: 'abusaid7388@gmail.com',
-  phone: '+8801608797655',
-  address: 'Middle Badda, Dhaka, Bangladesh - 1212 ',
-  github: 'https://github.com/said7388',
-  facebook: 'https://www.facebook.com/abusaid.riyaz/',
-  linkedIn: 'https://www.linkedin.com/in/abu-said-bd/',
-  twitter: 'https://twitter.com/said7388',
-  stackOverflow: 'https://stackoverflow.com/users/16840768/abu-said',
-  leetcode: "https://leetcode.com/said3812/",
-  devUsername: "said7388",
-  resume: "https://drive.google.com/file/d/1eyutpKFFhJ9X-qpQGKhUNnVRkB5Wer00/view?usp=sharing"
-}
+  description:
+    "Hello, I’m Ricko Najmudin, an experienced and enthusiastic programmer with a deep interest in technology. I’m a quick learner with a strong self-directed approach, always eager to master new technologies and discover innovative solutions to various challenges. I have a broad interest in nearly all areas of web application development and am committed to making the web more accessible. My core expertise lies in Php, Golang, JavaScript,  and I am also well-versed in frameworks like Laravel, along with other essential web technologies such as HTML, CSS, and Node.js. I am open to job opportunities that align with my skills and interests.",
+  email: "Rickonajmudin@gmail.com",
+  phone: "+6289617257030",
+  address: "Jl.Moch Toha No.281 Cigelereng, Regol Bandung Indonesia",
+  github: "https://github.com/RickNazmudin",
+  facebook: "https://www.facebook.com/endricko.nazmudin",
+  linkedIn: "#",
+  twitter: "https://x.com/nazmudin_BHC",
+  stackOverflow: "#",
+  leetcode: "#",
+  devUsername: "#",
+  resume: "#",
+};

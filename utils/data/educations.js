@@ -1,20 +1,29 @@
 export const educations = [
   {
     id: 1,
-    title: "Bachelor Degree",
-    duration: "2020 - Present",
-    institution: "National University of Bangladesh",
+    title: "Sarjana Teknik (S.T.)",
+    duration: "2020",
+    institution: "Institut Teknologi Nasional (Itenas)",
   },
-  {
-    id: 2,
-    title: "Higher Secondary Certificate",
-    duration: "2018 - 2020",
-    institution: "Noakhali Islamia Kamil Madrasah",
-  },
+
+  // {
+  //   id: 2,
+  //   title: "Sarjana Arsitektur (S.Ars)",
+  //   duration: "2024",
+  //   institution: "Institut Teknologi Bandung (ITB)",
+  // },
+
   {
     id: 3,
-    title: "Secondary School Certificate",
-    duration: "2008 - 2018",
-    institution: "Baitus Saif Islamia Madrasah",
-  }
-]
+    title: "CompTIA IT Fundamentals (ITF+)",
+    duration: "2020",
+    institution: "CompTIA",
+  },
+
+  {
+    id: 4,
+    title: "Cisco Certified Network Associate",
+    duration: "2017",
+    institution: "Cisco",
+  },
+];
