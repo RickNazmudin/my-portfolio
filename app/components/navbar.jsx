@@ -113,7 +113,7 @@ function Navbar() {
                   onClick={handleMenuItemClick}
                 >
                   <div className="font-mono text-[#ABB2BF] transition-colors duration-300 group-hover:text-[#98C379]">
-                    {"<About />"}
+                    {"&lt;ABOUT /&gt;"}
                   </div>
                 </Link>
               </li>
@@ -124,7 +124,7 @@ function Navbar() {
                   onClick={handleMenuItemClick}
                 >
                   <div className="font-mono text-[#ABB2BF] transition-colors duration-300 group-hover:text-[#98C379]">
-                    {"<Experience />"}
+                    {"&lt;EXPERIENCE /&gt;"}
                   </div>
                 </Link>
               </li>
@@ -135,7 +135,7 @@ function Navbar() {
                   onClick={handleMenuItemClick}
                 >
                   <div className="font-mono text-[#ABB2BF] transition-colors duration-300 group-hover:text-[#98C379]">
-                    {"<Skills />"}
+                    {"&lt;SKILLS /&gt;"}
                   </div>
                 </Link>
               </li>
@@ -146,7 +146,7 @@ function Navbar() {
                   onClick={handleMenuItemClick}
                 >
                   <div className="font-mono text-[#ABB2BF] transition-colors duration-300 group-hover:text-[#98C379]">
-                    {"<Education />"}
+                    {"&lt;EDUCATION /&gt;"}
                   </div>
                 </Link>
               </li>
@@ -157,7 +157,7 @@ function Navbar() {
                   onClick={handleMenuItemClick}
                 >
                   <div className="font-mono text-[#ABB2BF] transition-colors duration-300 group-hover:text-[#98C379]">
-                    {"<Projects />"}
+                    {"&lt;PROJECTS /&gt;"}
                   </div>
                 </Link>
               </li>
