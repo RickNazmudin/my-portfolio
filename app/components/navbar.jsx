@@ -1,46 +1,20 @@
 "use client";
 // @flow strict
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Fungsi untuk mengatur overflow body
-  const toggleBodyScroll = (disable) => {
-    document.body.style.overflow = disable ? "hidden" : "unset";
-  };
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    toggleBodyScroll(!isMenuOpen);
-  };
-
-  // Handle menu item click
-  const handleMenuItemClick = () => {
-    setIsMenuOpen(false);
-    toggleBodyScroll(false);
-  };
-
-  // Cleanup pada unmount
-  useEffect(() => {
-    return () => {
+    // Menambahkan/menghapus class untuk mencegah scrolling ketika menu terbuka
+    if (!isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
       document.body.style.overflow = "unset";
-    };
-  }, []);
-
-  // Handle resize window
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 768 && isMenuOpen) {
-        setIsMenuOpen(false);
-        toggleBodyScroll(false);
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [isMenuOpen]);
+    }
+  };
 
   return (
     <nav className="bg-[#1E1E1E] border-b border-[#333333] relative">
@@ -62,7 +36,6 @@ function Navbar() {
           <button
             onClick={toggleMenu}
             className="md:hidden p-2 text-[#ABB2BF] hover:text-[#98C379] focus:outline-none z-50"
-            aria-label="Toggle menu"
           >
             <svg
               className="h-6 w-6"
@@ -92,8 +65,7 @@ function Navbar() {
           {isMenuOpen && (
             <div
               className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden"
-              onClick={handleMenuItemClick}
-              aria-hidden="true"
+              onClick={() => setIsMenuOpen(false)}
             />
           )}
 
@@ -110,10 +82,10 @@ function Navbar() {
                 <Link
                   className="block px-4 py-3 md:py-2 no-underline outline-none hover:no-underline group"
                   href="/#about"
-                  onClick={handleMenuItemClick}
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   <div className="font-mono text-[#ABB2BF] transition-colors duration-300 group-hover:text-[#98C379]">
-                    {"&lt;ABOUT /&gt;"}
+                    {"<About />"}
                   </div>
                 </Link>
               </li>
@@ -121,10 +93,10 @@ function Navbar() {
                 <Link
                   className="block px-4 py-3 md:py-2 no-underline outline-none hover:no-underline group"
                   href="/#experience"
-                  onClick={handleMenuItemClick}
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   <div className="font-mono text-[#ABB2BF] transition-colors duration-300 group-hover:text-[#98C379]">
-                    {"&lt;EXPERIENCE /&gt;"}
+                    {"<Experience />"}
                   </div>
                 </Link>
               </li>
@@ -132,10 +104,10 @@ function Navbar() {
                 <Link
                   className="block px-4 py-3 md:py-2 no-underline outline-none hover:no-underline group"
                   href="/#skills"
-                  onClick={handleMenuItemClick}
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   <div className="font-mono text-[#ABB2BF] transition-colors duration-300 group-hover:text-[#98C379]">
-                    {"&lt;SKILLS /&gt;"}
+                    {"<Skills />"}
                   </div>
                 </Link>
               </li>
@@ -143,10 +115,10 @@ function Navbar() {
                 <Link
                   className="block px-4 py-3 md:py-2 no-underline outline-none hover:no-underline group"
                   href="/#education"
-                  onClick={handleMenuItemClick}
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   <div className="font-mono text-[#ABB2BF] transition-colors duration-300 group-hover:text-[#98C379]">
-                    {"&lt;EDUCATION /&gt;"}
+                    {"<Education />"}
                   </div>
                 </Link>
               </li>
@@ -154,10 +126,10 @@ function Navbar() {
                 <Link
                   className="block px-4 py-3 md:py-2 no-underline outline-none hover:no-underline group"
                   href="/#projects"
-                  onClick={handleMenuItemClick}
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   <div className="font-mono text-[#ABB2BF] transition-colors duration-300 group-hover:text-[#98C379]">
-                    {"&lt;PROJECTS /&gt;"}
+                    {"<Projects />"}
                   </div>
                 </Link>
               </li>
