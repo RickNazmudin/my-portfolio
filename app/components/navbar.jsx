@@ -133,22 +133,22 @@ function Navbar() {
               <li className="border-b border-[#333333] md:border-none">
                 <Link
                   className="block px-4 py-3 md:py-2 no-underline outline-none hover:no-underline group"
-                  href="/#education"
+                  href="/#projects"
                   onClick={handleLinkClick}
                 >
                   <div className="font-mono text-[#ABB2BF] transition-colors duration-300 group-hover:text-[#98C379]">
-                    {"<Education/>"}
+                    {"<Projects/>"}
                   </div>
                 </Link>
               </li>
               <li className="border-b border-[#333333] md:border-none">
                 <Link
                   className="block px-4 py-3 md:py-2 no-underline outline-none hover:no-underline group"
-                  href="/#projects"
+                  href="/#education"
                   onClick={handleLinkClick}
                 >
                   <div className="font-mono text-[#ABB2BF] transition-colors duration-300 group-hover:text-[#98C379]">
-                    {"<Projects/>"}
+                    {"<Education/>"}
                   </div>
                 </Link>
               </li>
