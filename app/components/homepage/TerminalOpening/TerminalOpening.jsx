@@ -7,6 +7,8 @@ function TerminalOpening() {
   const [terminalText, setTerminalText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
   const [showTerminal, setShowTerminal] = useState(true);
+  const [opacity, setOpacity] = useState(1);
+  const [showLoading, setShowLoading] = useState(false); // State baru untuk loading
 
   const commands = [
     "┌──(kali㉿kali)-[~]",
@@ -26,12 +28,10 @@ function TerminalOpening() {
       if (currentCommandIndex < commands.length) {
         const currentCommand = commands[currentCommandIndex];
 
-        // Jika masih ada karakter yang bisa ditambahkan
         if (currentCharIndex < currentCommand.length) {
           setTerminalText((prev) => prev + currentCommand[currentCharIndex]);
           currentCharIndex++;
         } else {
-          // Jika sudah selesai mengetik perintah, tambahkan newline dan reset indeks
           setTerminalText((prev) => prev + "\n");
           currentCommandIndex++;
           currentCharIndex = 0;
@@ -39,10 +39,6 @@ function TerminalOpening() {
       } else {
         setIsTyping(false);
         clearInterval(typingInterval);
-        // Fade out terminal setelah selesai
-        setTimeout(() => {
-          setShowTerminal(false);
-        }, 1000);
       }
     };
 
@@ -51,12 +47,35 @@ function TerminalOpening() {
     return () => clearInterval(typingInterval);
   }, []);
 
+  useEffect(() => {
+    if (!isTyping) {
+      // Tampilkan loading setelah typing selesai
+      setShowLoading(true);
+
+      // Mulai fade out terminal setelah 2 detik
+      setTimeout(() => {
+        setOpacity(0);
+      }, 2000);
+
+      // Sembunyikan terminal setelah fade out selesai
+      setTimeout(() => {
+        setShowTerminal(false);
+      }, 3000);
+    }
+  }, [isTyping]);
+
   if (!showTerminal) {
     return null;
   }
 
   return (
-    <div className="bg-kali h-screen flex items-center justify-center font-mono">
+    <div
+      className="bg-kali h-screen flex items-center justify-center font-mono"
+      style={{
+        transition: "opacity 1s ease-out",
+        opacity: opacity,
+      }}
+    >
       <div className="terminal-container">
         <div className="terminal-header">
           <div className="circle red"></div>
@@ -69,6 +88,12 @@ function TerminalOpening() {
             {terminalText}
             {isTyping && <span className="animate-blink">█</span>}
           </pre>
+          {showLoading && !isTyping && (
+            <div className="loading-container mt-4">
+              <div className="loading-spinner"></div>
+              <p className="text-green-500 mt-2">Loading Portfolio...</p>
+            </div>
+          )}
         </div>
       </div>
     </div>
