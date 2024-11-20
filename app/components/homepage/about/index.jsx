@@ -15,13 +15,15 @@ function AboutSection() {
       { threshold: 0.5 } // Gambar terlihat 50% di layar
     );
 
-    if (imageRef.current) {
-      observer.observe(imageRef.current);
+    const currentImageRef = imageRef.current; // Store the current ref value in a variable
+
+    if (currentImageRef) {
+      observer.observe(currentImageRef);
     }
 
     return () => {
-      if (imageRef.current) {
-        observer.unobserve(imageRef.current);
+      if (currentImageRef) {
+        observer.unobserve(currentImageRef);
       }
     };
   }, []);

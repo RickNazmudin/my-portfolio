@@ -119,6 +119,36 @@ export const projectsData = [
     image: "",
     role: "Forex Developer",
   },
+
+  {
+    id: 6,
+    name: "Web Investing Platform",
+    description:
+      "My team and I developed a web-based investing platform designed to simplify the management of investment portfolios for users. I contributed to the front-end development using React and the back-end using Node.js to ensure a responsive and intuitive user experience. We integrated market APIs to provide real-time data and in-depth analysis of various investment instruments. Additionally, I assisted in implementing security features such as two-factor authentication and data encryption to protect user information. This project aims to provide effective tools for investors, whether beginners or experienced, to make informed investment decisions.",
+    tools: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "API Integration",
+      "Two-Factor Authentication",
+    ],
+    code: "",
+    demo: "",
+    image: "",
+    role: "Web Developer",
+  },
+
+  {
+    id: 7,
+    name: "Exness Trading Web Application",
+    description:
+      "My team and I developed a web application tailored for Exness users, designed to enhance the trading experience through a user-friendly interface and advanced analytics. I played a key role in the front-end development using Angular, ensuring a seamless and responsive design that allows traders to monitor their accounts and execute trades efficiently. We integrated Exness API to provide real-time market data, trading signals, and portfolio management tools. Additionally, I contributed to the implementation of features such as customizable dashboards and risk management tools to help users make informed trading decisions. This project aims to empower traders on the Exness platform with the tools they need for successful trading.",
+    tools: ["Angular", "Node.js", "Exness API", "Chart.js", "Bootstrap"],
+    code: "",
+    demo: "",
+    image: "",
+    role: "Web Developer",
+  },
 ];
 
 // Do not remove any property.
