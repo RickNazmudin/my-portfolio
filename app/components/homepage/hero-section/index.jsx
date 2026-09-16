@@ -43,17 +43,17 @@ function HeroSection() {
           </h1>
 
           <p className="mt-4 text-sm sm:text-base text-gray-300 leading-relaxed max-w-xl">
-            Specializing in engineering end-to-end <strong>Web Applications</strong> and <strong>Mobile Apps</strong>. Proven experience architecting scalable systems like PadelSpace, Marketplace UMKM, POS UMKM, and Hospital Information Systems.
+            Specializing in engineering end-to-end <strong>Web Applications</strong>, <strong>Mobile Apps</strong>, and <strong>High-Converting Landing Pages</strong>. Proven track record delivering 50+ scalable digital systems including PadelSpace, Marketplace UMKM, POS UMKM, and Enterprise Hospital ERPs.
           </p>
 
           {/* Experience & Project Metric Highlights */}
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 my-6 w-full max-w-lg">
             <div className="p-3 rounded-xl bg-[#11152c]/90 border border-[#1f2648]">
-              <p className="text-xl sm:text-2xl font-bold text-amber-400">20+</p>
+              <p className="text-xl sm:text-2xl font-bold text-amber-400">50+</p>
               <p className="text-xs text-gray-400 font-medium">Completed Projects</p>
             </div>
             <div className="p-3 rounded-xl bg-[#11152c]/90 border border-[#1f2648]">
-              <p className="text-xl sm:text-2xl font-bold text-cyan-400">Web & Mobile</p>
+              <p className="text-xl sm:text-2xl font-bold text-cyan-400">Web &amp; Mobile</p>
               <p className="text-xs text-gray-400 font-medium">Cross-Platform Apps</p>
             </div>
             <div className="p-3 rounded-xl bg-[#11152c]/90 border border-[#1f2648] col-span-2 sm:col-span-1">

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { FaLaptopCode, FaMobileAlt, FaServer, FaChartLine, FaCheckCircle } from "react-icons/fa";
+import { FaLaptopCode, FaMobileAlt, FaServer, FaChartLine, FaCheckCircle, FaGlobe } from "react-icons/fa";
 import { BiGitBranch } from "react-icons/bi";
 
 function ProjectCard({ project }) {
@@ -10,6 +10,8 @@ function ProjectCard({ project }) {
         return <FaMobileAlt className="text-emerald-400" />;
       case "Web App":
         return <FaLaptopCode className="text-cyan-400" />;
+      case "Landing Page":
+        return <FaGlobe className="text-pink-400" />;
       case "FinTech / Algo":
         return <FaChartLine className="text-amber-400" />;
       default:

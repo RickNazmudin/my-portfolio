@@ -20,6 +20,11 @@ function TerminalOpening() {
   const [showLoading, setShowLoading] = useState(false);
 
   useEffect(() => {
+    // Reset scroll to top
+    if (typeof window !== "undefined") {
+      window.scrollTo(0, 0);
+    }
+
     let currentCommandIndex = 0;
     let currentCharIndex = 0;
 
@@ -53,6 +58,9 @@ function TerminalOpening() {
 
       const timerHide = setTimeout(() => {
         setShowTerminal(false);
+        if (typeof window !== "undefined") {
+          window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+        }
       }, 2000);
 
       return () => {
@@ -66,6 +74,9 @@ function TerminalOpening() {
     setOpacity(0);
     setTimeout(() => {
       setShowTerminal(false);
+      if (typeof window !== "undefined") {
+        window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+      }
     }, 300);
   };
 
